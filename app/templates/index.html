@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cryptocurrency - Landing Page Template</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Cryptocurrency Landing Page Template">
+	<meta name="keywords" content="cryptocurrency, unica, creative, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->
+	<link href="../static/img/favicon.ico" rel="shortcut icon"/>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="static/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="static/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="static/css/themify-icons.css"/>
+	<link rel="stylesheet" href="static/css/animate.css"/>
+	<link rel="stylesheet" href="static/css/owl.carousel.css"/>
+	<link rel="stylesheet" href="static/css/style.css"/>
+
+
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section -->
+	<header class="header-section clearfix">
+		<div class="container-fluid">
+			<a href="index.html" class="site-logo">
+				<img src="static/img/logo.png" alt="">
+			</a>
+			<div class="responsive-bar"><i class="fa fa-bars"></i></div>
+			<a href="" class="user"><i class="fa fa-user"></i></a>
+			<nav class="main-menu">
+				<ul class="menu-list">
+					<li><a href="#solution">Solution</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- Header section end -->
+
+
+	<!-- Hero section -->
+	<section class="hero-section">
+		<div class="container" id="solution">
+			<div class="row">
+				<div class="col-md-6 hero-text">
+					<h2>Decode your message</h2>
+					<h4>Use modern RSA decipher to communicate secretly.<br>
+						Input example:<br>
+						3185, 2038, 2460, 2550<br>
+						53<br>
+						61<br>
+						17<br>
+						Output: squirrel
+
+					</h4>
+					<form class="hero-subscribe-from" method="post">
+						<input type="text" placeholder="Enter your encode message" name="message">
+						<input type="text" placeholder="Enter your first multiplier" name="p">
+						<input type="text" placeholder="Enter your second multiplier" name="q">
+						<input type="text" placeholder="Enter your public key" name="e">
+						<button class="site-btn sb-gradients">Decode</button>
+					</form>
+				</div>
+				<div class="col-md-6">
+					<img src="static/img/laptop.png" class="laptop-image" alt="">
+				</div>
+
+				<h4>Your decoded message is:</h4>
+				<div class="hero-response">
+					<textarea rows="5" cols="45">{{decoded}}</textarea>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- Hero section end -->
+
+
+	<!-- About section -->
+	<section class="about-section spad">
+		<div class="container" id="about">
+			<div class="row">
+				<div class="col-lg-6 offset-lg-6 about-text">
+					<h2>What is RSA</h2>
+					<h5>The RSA cryptosystem is the most widely-used public key cryptography algorithm in the world. It
+						can be used to encrypt a message without the need to exchange a secret key separately.</h5>
+					<p> The RSA algorithm can be used for both public key encryption and digital signatures. Its
+						security is based on the difficulty of factoring large integers.</p>
+
+					<p>Party A can send an encrypted message to party B without any prior exchange of secret keys. A
+						just uses B's public key to encrypt the message and B decrypts it using the private key, which
+						only he knows. RSA can also be used to sign a message, so A can sign a message using their
+						private key and B can verify it using A's public key. </p>
+				</div>
+			</div>
+			<div class="about-img">
+				<img src="static/img/about-img.png" alt="">
+			</div>
+		</div>
+	</section>
+	<!-- About section end -->
+
+	<!-- Team section -->
+	<section class="team-section spad">
+		<div class="container" id="contact">
+			<div class="section-title text-center">
+				<h2>Meet Our Team</h2>
+				<p>Our experts in RSA crypto can always help you with any of your questions!</p>
+			</div>
+		</div>
+		<div class="team-members clearfix">
+
+			<!-- Team member -->
+			<div class="member">
+				<div class="member-text">
+					<div class="member-img set-bg" data-setbg="static/img/member/denys_herasymuk.jpg"></div>
+					<h2>Denys Herasymuk</h2>
+					<span>UCU student</span>
+				</div>
+			</div>
+
+			<!-- Team member -->
+			<div class="member">
+				<div class="member-text">
+					<div class="member-img set-bg" data-setbg="static/img/member/volodymyr_tsapiv.jpg"></div>
+					<h2>Volodymyr Tsapiv</h2>
+					<span>UCU student</span>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!-- Team section -->
+
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="static/js/jquery-3.2.1.min.js"></script>
+	<script src="static/js/owl.carousel.min.js"></script>
+	<script src="static/js/main.js"></script>
+</body>
+</html>
