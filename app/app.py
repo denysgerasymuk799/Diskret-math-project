@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from RSA import decoder
+from app.RSA import decoder
 
 app = Flask(__name__)
 
@@ -24,6 +24,3 @@ def input_profession():
             response = decoder(message, p, q, e)
     return render_template("index.html", decoded=response)
 
-
-if __name__ == "__main__":
-    app.run(debug=True)
