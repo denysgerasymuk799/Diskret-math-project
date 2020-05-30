@@ -9,6 +9,7 @@ verify_ssl = true
 flask = "*"
 gunicorn = "*"
 pipenv = "*"
+whitenoise = "*"
 
 [requires]
 python_version = "3.8"
