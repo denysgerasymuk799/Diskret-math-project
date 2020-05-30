@@ -1,1 +1,1 @@
-web: gunicorn wsgi: Herasymuk_Tsapiv_computer_project
+web: gunicorn wsgi: app
