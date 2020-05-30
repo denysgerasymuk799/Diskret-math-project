@@ -120,4 +120,4 @@ def encoder(message, p, q, e):
 
 
 if __name__ == '__main__':
-    print(encoder("squirrel", 53, 61, 17))
+    print(encoder("squirrel", 509, 521, 17))
