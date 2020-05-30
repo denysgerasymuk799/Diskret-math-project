@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from app.RSA import decoder
+from RSA import decoder
 
 app = Flask(__name__)
 
