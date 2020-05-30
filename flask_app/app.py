@@ -18,6 +18,8 @@ def input_profession():
             p = int(request.form['p'])
             q = int(request.form['q'])
             e = int(request.form['e'])
+            if p * q < 255255:
+                raise ValueError
         except ValueError:
             return render_template("index.html", decoded=response)
         if message and p and q and e:
