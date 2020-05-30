@@ -1,6 +1,3 @@
-import re
-
-
 def inversion_by_module(base, module):
     """
     Return inverted by give module number
@@ -39,11 +36,11 @@ def deciphering_code(codes_lst):
     """
     message = ""
     for code in codes_lst:
-        second_letter_code = code % 100
-        first_letter_code = code // 100
+        second_letter_code = code % 1000
+        first_letter_code = code // 1000
 
-        letter1 = chr(first_letter_code + 97)
-        letter2 = chr(second_letter_code + 97)
+        letter1 = chr(first_letter_code)
+        letter2 = chr(second_letter_code)
         message += letter1 + letter2
 
     return message
@@ -55,15 +52,13 @@ def translate_into_ints(message):
     :param message: str
     :return: list(int)
     """
-    message = re.sub(r'[^A-Za-z]', '', message)
     if len(message) % 2 == 1:
-        message += "a"
-    message_ = message.lower()
+        message += " "
     result = []
-    for bite in range(len(message_) // 2):
+    for bite in range(len(message) // 2):
         result.append(
-            int("".join([str(ord(letter) - ord("a")).zfill(2)
-                         for letter in message_[bite * 2: bite * 2 + 2]])))
+            int("".join([str(ord(letter)).zfill(3)
+                         for letter in message[bite * 2: bite * 2 + 2]])))
     return result
 
 
@@ -105,6 +100,24 @@ def decoder(message, p, q, e):
     return deciphering_code(decoded_message)
 
 
+def encoder(message, p, q, e):
+    """
+    Encode message encoded with RSA and
+    returns list of strings of integers that represents
+    letters in message
+    :param message: str
+    :param p: prime int
+    :param q: prime int
+    :param e: int mutually prime to p and q
+    :return: str
+    """
+    encoded_message = []
+    message = translate_into_ints(message)
+    n = p * q
+    for bite in message:
+        encoded_message.append(modular_degree(bite, e, n))
+    return ", ".join(list(map(str, encoded_message)))
+
+
 if __name__ == '__main__':
-    print(decoder("3185, 2038, 2460, 2550", 53, 61, 17))
-    print(decoder("667, 1947, 671", 59, 43, 13))
+    print(encoder("squirrel", 7907, 7919, 17))
