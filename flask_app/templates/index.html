@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Cryptocurrency - Landing Page Template</title>
+	<title>RSA Cipher - Landing Page Template</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="Cryptocurrency Landing Page Template">
 	<meta name="keywords" content="cryptocurrency, unica, creative, html">
@@ -43,7 +43,8 @@
 			<a href="" class="user"><i class="fa fa-user"></i></a>
 			<nav class="main-menu">
 				<ul class="menu-list">
-					<li><a href="#solution">Solution</a></li>
+					<li><a href="#encode">Encode</a></li>
+					<li><a href="#decode">Decode</a></li>
 					<li><a href="#about">About</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
@@ -53,41 +54,83 @@
 	<!-- Header section end -->
 
 
-	<!-- Hero section -->
-	<section class="hero-section">
-		<div class="container" id="solution">
-			<div class="row">
-				<div class="col-md-6 hero-text">
-					<h2>Decode your message</h2>
-					<h4>Use modern RSA decipher to communicate secretly. Multiplication of primes has to be bigger that 255255<br>
-						Input example:<br>
-						51172654, 22613316, 7016579, 48129350<br>
-						7907<br>
-						7919<br>
-						17<br>
-						Output: squirrel
+	<form class="hero-subscribe-from" method="post">
+		<!-- Hero section -->
+		<section class="hero-section">
+			<div class="container" id="encode">
+				<div class="row">
+					<div class="col-md-6 hero-text">
+						<h2>Encode your message</h2>
+						<h4>Use modern RSA decipher to communicate secretly. Input any length of message.<br>
+							Multiplication of primes has to be bigger that 255255 for right work with ASCII table<br>
+							Input example:<br>
+							Thank you for this semester!!!<br>
+							509<br>
+							521<br>
+							17<br>
+							Output: 149448, 246272, 256490, 197831, 118058, 163098, 181455, 63076, 924,<br>
+							75489, 97523,239630, 110625, 59065, 233671
 
-					</h4>
-					<form class="hero-subscribe-from" method="post">
+						</h4>
+							<input type="text" placeholder="Enter your message" name="message0">
+							<input type="text" placeholder="Enter your first multiplier" name="p0">
+							<input type="text" placeholder="Enter your second multiplier" name="q0">
+							<input type="text" placeholder="Enter your public key" name="e0">
+							<button class="site-btn sb-gradients">Encode</button>
+					</div>
+					<div class="col-md-6">
+						<img src="static/img/laptop.png" class="laptop-image" alt="">
+					</div>
+
+					<h4>Your encoded message is:</h4>
+					<div class="hero-response">
+						<textarea rows="5" cols="45">{{encoded}}</textarea>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- Hero section end -->
+
+
+		<!-- Hero section -->
+		<section class="hero-section">
+			<div class="container" id="decode">
+				<div class="row">
+					<div class="col-md-6 hero-text">
+						<h2>Decode your message</h2>
+						<h4>Use modern RSA decipher to communicate secretly. Multiplication of primes has to be bigger that 255255<br>
+							Input example:<br>
+							170026, 35590, 66859, 174662, 58275, 96861, 190973,<br>
+							173454, 110625, 156080, 16568, 173454,<br>
+							54017, 233671, 249209<br>
+							509<br>
+							521<br>
+							17<br>
+							Output: It was really interesting !!!
+
+						</h4>
+
 						<input type="text" placeholder="Enter your encode message" name="message">
 						<input type="text" placeholder="Enter your first multiplier" name="p">
 						<input type="text" placeholder="Enter your second multiplier" name="q">
 						<input type="text" placeholder="Enter your public key" name="e">
 						<button class="site-btn sb-gradients">Decode</button>
-					</form>
-				</div>
-				<div class="col-md-6">
-					<img src="static/img/laptop.png" class="laptop-image" alt="">
-				</div>
+					</div>
+					<div class="col-md-6">
+						<img src="static/img/laptop.png" class="laptop-image" alt="">
+					</div>
 
-				<h4>Your decoded message is:</h4>
-				<div class="hero-response">
-					<textarea rows="5" cols="45">{{decoded}}</textarea>
-				</div>
+					<h4>Your decoded message is:</h4>
+					<div class="hero-response">
+						<textarea rows="5" cols="45">{{decoded}}</textarea>
+					</div>
 
+				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+	</form>
+
 	<!-- Hero section end -->
 
 
